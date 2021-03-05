@@ -10,12 +10,12 @@ import { EmpListComponent } from './emp-list/emp-list.component';
 import { EmpUpdateComponent } from './emp-update/emp-update.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'department', pathMatch: 'full' }, 
+  { path: '', redirectTo: 'adddept', pathMatch: 'full' }, 
   { path:'adddept',   component:DeptFormComponent},
   { path: 'listdept', component:DeptListComponent },
   { path: 'deptupdate/:id', component: DeptUpdateComponent },
   { path: 'deptdetails/:id', component: DeptDetailsComponent },
-  { path: '', redirectTo: 'employee', pathMatch: 'full' }, 
+  { path: '', redirectTo: 'addemp', pathMatch: 'full' }, 
   { path:'addemp',   component:EmpFormComponent},
   { path: 'listemp', component:EmpListComponent },
   { path: 'empupdate/:id', component: EmpUpdateComponent },
