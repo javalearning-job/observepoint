@@ -1,0 +1,21 @@
+<div class="card my-5">
+  <div class="panel-heading">
+    <h2>Add Department</h2>
+  </div>
+    <div class="card-body">
+      <form (ngSubmit)="onSubmit()" #deptForm="ngForm">
+        <div class="form-group">
+          <label for="name">Department Name</label>
+          <input type="text" [(ngModel)]="department.deptName" 
+            class="form-control" 
+            id="deptName" 
+            name="deptName" 
+            placeholder="Enter Department Name"
+            required #deptName="ngModel">
+        </div>        
+        <div [hidden]="deptName.valid || deptName.pristine" class="alert alert-danger">Department Name is required</div>
+        <button type="submit" [disabled]="!deptForm.form.valid" 
+          class="btn btn-info">Submit</button>
+      </form>
+    </div>
+  </div>

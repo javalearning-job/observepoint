@@ -1,0 +1,27 @@
+<div class="card my-5">
+    <div class="panel-heading">
+        <h2>Department List</h2>
+      </div>
+    <div class="card-body">
+      <table class="table table-bordered table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Department ID</th>
+            <th scope="col">Department Name</th>
+            <th scope="col">Actions</th>
+         </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let department of departments">
+            <td>{{ department.deptId }}</td>
+            <td>{{ department.deptName }}</td>
+            <td>
+                <button (click)="updateDepartment(department.deptId)" class="btn btn-info" style="margin-left: 10px">Update</button>
+                <button (click)="departmentDetails(department.deptId)" class="btn btn-info" style="margin-left: 10px">Details</button>
+                <button (click)="deleteDepartment(department.deptId)" class="btn btn-danger" style="margin-left: 10px">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
